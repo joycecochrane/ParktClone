@@ -1,5 +1,16 @@
 #Readme
 
+##Important
+This is a clone of the original repository for the UBC CPSC 310 group project.
+
+My responsibilities:
+* Implemented the parking meters parser in Ruby to extract data from a KML file provided by Vancouver’s Open Data Catalogue using the nokogiri gem and string splitting 
+* Collaborated in front-end development written using Javascript to create an interactive user interface which included range sliders to modify the current level of filtering
+* Debugged Javascript methods using the browser console to ensure the filtering options were returning the correct parking meters 
+* Frequently committed code to GitHub to accurately track the project’s progress and issues 
+
+
+
 [Parkt](https://parktserver.herokuapp.com/)
 
 ##Setting up Your Development Environment
