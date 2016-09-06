@@ -1,0 +1,18 @@
+{"meters": [
+    <% if @parking_meters != nil %>
+    <% @parking_meters.each do |pm| %>
+    <% if pm != @parking_meters[0] %>,
+    <% end %>
+        {
+            "meterHeadType": "<%= pm.meterHeadType %>",
+            "timeLimit": <%= pm.timeLimit %>,
+            "rate": <%= pm.rate %>,
+            "payByPhoneNumber": <%= pm.payByPhoneNumber %>,
+            "timeInEffect": "<%= pm.timeInEffect %>",
+            "lat": <%= pm.lat %>,
+            "lng": <%= pm.lon %>,
+            "infowindow": "<%= pm.payByPhoneNumber %>/n <%= pm.timeInEffect %>"
+        }
+    <% end %>
+<% end %>]}
+

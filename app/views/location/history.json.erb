@@ -1,0 +1,12 @@
+{"location": [
+    <% if @history != nil %>
+    <% @history.each do |l| %>
+    <% if l != @history[0] %>,
+    <% end %>
+        {
+            "lat": <%= l.lat %>,
+            "lng": <%= l.lon %>
+        }
+    <% end %>
+<% end %>]}
+

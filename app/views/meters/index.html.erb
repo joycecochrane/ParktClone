@@ -1,0 +1,27 @@
+<h1> Parkt Admin Page </h1>
+
+<% isAdmin = false %>
+
+<% if current_user != nil %>
+<% isAdmin = current_user.name == "Scott Luu" || current_user.uid == "47533343" || current_user.uid == "101054246" %>
+<% end %>
+
+<% if !Rails.env.production?  || isAdmin %>
+
+<p> Current status: <%= kml_message %>
+
+</p>
+
+<p> Download the KML file:
+<%= button_to 'Refresh Data', { :controller => :data_downloader, :action => :refresh_kml , :method => :post} %> </p>
+
+<p> <%= meters_message %> </p>
+
+<p> Re-Parse the Meters database (note this will take awhile):
+    <%= button_to "Reload DB", { :controller => :meters, :action => :reload_data ,:method => :post}   %>  </p>
+
+<% end %>
+
+<% if !isAdmin && Rails.env.production? %>
+<h2>You cannot access this page, sorry!</h2>
+<% end %>

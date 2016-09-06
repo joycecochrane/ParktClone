@@ -1,0 +1,33 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ 
+ #map {
+  /* Preserve aspet ratio */
+  min-width: 100%;
+ min-height: 100%;
+ }
+ 
+ #radiusControlSlider {
+ 	max-width: 100%;
+ 	max-height: 100%;
+ 
+ }
+
+#rateControlSlider {
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+#hourControlSlider {
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+#logo {
+ min-width: 100%;
+ min-height: 100%;
+}
